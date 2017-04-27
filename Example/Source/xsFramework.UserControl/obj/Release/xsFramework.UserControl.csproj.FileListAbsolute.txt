@@ -1,0 +1,7 @@
+E:\項目\XSSystem\XSSystem\xsFramework.UserControl\bin\Release\xsFramework.UserControl.dll
+E:\項目\XSSystem\XSSystem\xsFramework.UserControl\bin\Release\xsFramework.UserControl.pdb
+E:\項目\XSSystem\XSSystem\xsFramework.UserControl\bin\Release\xsFramework.SqlServer.dll
+E:\項目\XSSystem\XSSystem\xsFramework.UserControl\bin\Release\xsFramework.SqlServer.pdb
+E:\項目\XSSystem\XSSystem\xsFramework.UserControl\obj\Release\xsFramework.UserControl.csprojResolveAssemblyReference.cache
+E:\項目\XSSystem\XSSystem\xsFramework.UserControl\obj\Release\xsFramework.UserControl.dll
+E:\項目\XSSystem\XSSystem\xsFramework.UserControl\obj\Release\xsFramework.UserControl.pdb

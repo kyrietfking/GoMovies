@@ -1,0 +1,5 @@
+E:\項目\XSSystem\XSSystem\xsFramework.Web\bin\Release\xsFramework.Web.dll
+E:\項目\XSSystem\XSSystem\xsFramework.Web\bin\Release\xsFramework.Web.pdb
+E:\項目\XSSystem\XSSystem\xsFramework.Web\obj\Release\xsFramework.Web.dll
+E:\項目\XSSystem\XSSystem\xsFramework.Web\obj\Release\xsFramework.Web.pdb
+E:\項目\XSSystem\XSSystem\xsFramework.Web\obj\Release\xsFramework.Web.csprojResolveAssemblyReference.cache

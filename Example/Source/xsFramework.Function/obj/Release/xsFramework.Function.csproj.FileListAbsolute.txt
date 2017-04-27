@@ -1,0 +1,5 @@
+E:\項目\XSSystem\XSSystem\xsFramework.Function\bin\Release\xsFramework.Function.dll
+E:\項目\XSSystem\XSSystem\xsFramework.Function\bin\Release\xsFramework.Function.pdb
+E:\項目\XSSystem\XSSystem\xsFramework.Function\obj\Release\xsFramework.Function.dll
+E:\項目\XSSystem\XSSystem\xsFramework.Function\obj\Release\xsFramework.Function.pdb
+E:\項目\XSSystem\XSSystem\xsFramework.Function\obj\Release\xsFramework.Function.csprojResolveAssemblyReference.cache
