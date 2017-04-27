@@ -1,0 +1,15 @@
+E:\xsFramework(ado.net)\xsFramework.Function\obj\Debug\ResolveAssemblyReference.cache
+E:\xsFramework(ado.net)\xsFramework.Function\bin\Debug\xsFramework.Function.dll
+E:\xsFramework(ado.net)\xsFramework.Function\bin\Debug\xsFramework.Function.pdb
+E:\xsFramework(ado.net)\xsFramework.Function\obj\Debug\xsFramework.Function.dll
+E:\xsFramework(ado.net)\xsFramework.Function\obj\Debug\xsFramework.Function.pdb
+D:\myproject\XSSystem\xsFramework.Function\bin\Debug\xsFramework.Function.dll
+D:\myproject\XSSystem\xsFramework.Function\bin\Debug\xsFramework.Function.pdb
+D:\myproject\XSSystem\xsFramework.Function\obj\Debug\ResolveAssemblyReference.cache
+D:\myproject\XSSystem\xsFramework.Function\obj\Debug\xsFramework.Function.dll
+D:\myproject\XSSystem\xsFramework.Function\obj\Debug\xsFramework.Function.pdb
+E:\項目\XSSystem\XSSystem\xsFramework.Function\bin\Debug\xsFramework.Function.dll
+E:\項目\XSSystem\XSSystem\xsFramework.Function\bin\Debug\xsFramework.Function.pdb
+E:\項目\XSSystem\XSSystem\xsFramework.Function\obj\Debug\xsFramework.Function.dll
+E:\項目\XSSystem\XSSystem\xsFramework.Function\obj\Debug\xsFramework.Function.pdb
+E:\項目\XSSystem\XSSystem\xsFramework.Function\obj\Debug\xsFramework.Function.csprojResolveAssemblyReference.cache

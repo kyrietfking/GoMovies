@@ -1,0 +1,15 @@
+E:\項目\XSSystem\XSSystem\XSSystem\bin\XSSystem.dll
+E:\項目\XSSystem\XSSystem\XSSystem\bin\XSSystem.pdb
+E:\項目\XSSystem\XSSystem\XSSystem\bin\CKFinder.dll
+E:\項目\XSSystem\XSSystem\XSSystem\bin\xsFramework.Function.dll
+E:\項目\XSSystem\XSSystem\XSSystem\bin\xsFramework.SqlServer.dll
+E:\項目\XSSystem\XSSystem\XSSystem\bin\xsFramework.UserControl.dll
+E:\項目\XSSystem\XSSystem\XSSystem\bin\xsFramework.Web.dll
+E:\項目\XSSystem\XSSystem\XSSystem\bin\xsFramework.Function.pdb
+E:\項目\XSSystem\XSSystem\XSSystem\bin\xsFramework.SqlServer.pdb
+E:\項目\XSSystem\XSSystem\XSSystem\bin\xsFramework.UserControl.pdb
+E:\項目\XSSystem\XSSystem\XSSystem\bin\xsFramework.Web.pdb
+E:\項目\XSSystem\XSSystem\XSSystem\bin\CKFinder.pdb
+E:\項目\XSSystem\XSSystem\XSSystem\obj\Debug\XSSystem.csprojResolveAssemblyReference.cache
+E:\項目\XSSystem\XSSystem\XSSystem\obj\Debug\XSSystem.dll
+E:\項目\XSSystem\XSSystem\XSSystem\obj\Debug\XSSystem.pdb
