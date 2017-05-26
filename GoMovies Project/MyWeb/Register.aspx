@@ -34,7 +34,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	      </div>
 	      <div class="content">
       	     <div class="register">
-		  	  <form> 
+		  	  <form id="form0" runat="server"> 
 				 <div class="register-top-grid">
 					<h3>个人信息</h3>
 					 <div>
@@ -66,14 +66,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							 </div>
 							 <div class="clearfix"> </div>
 					 </div>
-				</form>
+				
 				<div class="clearfix"> </div>
 				<div class="register-but">
-				   <form id="form1" runat="server">
+				 
 					   <input type="submit" value="提交" runat="server" onserverclick="submitregister">
 					   <div class="clearfix"> </div>
-				   </form>
+				 
 				</div>
+                    </form>
 		   </div>
            </div>
     </div>
