@@ -10,7 +10,6 @@ using System.Web.UI.WebControls;
 using System.Collections;
 using System.Configuration;
 using System.Data;
-using System.Linq;
 using System.Web.Security;
 using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls.WebParts;
@@ -23,12 +22,18 @@ public partial class Register : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        lastname.Value = "ooo";
+        
         //Page.Response.Buffer = false;
         //Page.Response.Cache.SetNoStore();
     }
     protected void submitregister(object sender, EventArgs e)
     {
+        if(password.Value!=confirmpassword.Value)
+        {
+            //errormsg.Text = "The two passwords must be identical";
+         
+            return;
+        }
         DatabaseAction dbaction = new DatabaseAction();
         bool IsSuccess = dbaction.CreatAccount(emailaddress.Value, firstname.Value, password.Value);
 

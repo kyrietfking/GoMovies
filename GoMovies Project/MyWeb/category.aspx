@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Home.aspx.cs" Inherits="Home" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Category.aspx.cs" Inherits="Home" %>
 
 <!DOCTYPE html>
 <!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
@@ -55,6 +55,15 @@ function SetCookie(cookieName,cookieValue,nDays) {
     document.cookie = cookieName + "=" + escape(cookieValue)
         + ";expires=" + expire.toGMTString();
 }
+function ReadCookie(cookieName) {
+    var theCookie = "" + document.cookie;
+    var ind = theCookie.indexOf(cookieName);
+    if (ind == -1 || cookieName == "") return "";
+    var ind1 = theCookie.indexOf(';', ind);
+    if (ind1 == -1) ind1 = theCookie.length;
+    /*读取Cookie值*/
+    return unescape(theCookie.substring(ind + cookieName.length + 1, ind1));
+}
 function pass(id) {
 
     var title = $(id).innerHTML;
@@ -62,10 +71,10 @@ function pass(id) {
     /*是否选中7天内无需登录*/
         SetCookie("title",title,1);
     /*跳转到ex8.html页面*/
-    document.location = "Category.aspx";
+
+        document.location= "Movie.aspx";
 
 }
-
 function passToCategory(id) {
 
     var category = $(id).innerHTML;
@@ -76,14 +85,25 @@ function passToCategory(id) {
     document.location = "Category.aspx";
 
 }
-
 function $(id) {
     return document.getElementById(id);
 }
 
-</script>   
+function init() {
+
+    var category = ReadCookie("category");
+    if (category && category.length > 0) {
+        $("ha").innerHTML =category;
+    } else {
+        $(category).innerHTML = "aaaa";
+    }
+
+}
+</script>
 </head>
-<body>
+
+<body onload="init()">
+
 
 
 <div class="wrap-body">
@@ -130,7 +150,7 @@ function $(id) {
 				<nav>
 					<div class="wrap-nav">
 					   <ul>
-						 <li class="active"><a href="Home.aspx">Home</a></li>
+						 <li ><a href="Home.aspx">Home</a></li>
 						 <li id="喜剧片"><a onclick="passToCategory(this.id)" id="1"> 喜剧片</a></li>
 						 <li id="动作片"><a onclick="passToCategory(this.id)" id="2"> 动作片</a></li>
 						 <li id="爱情片"><a onclick="passToCategory(this.id)" id="3"> 爱情片</a></li>
@@ -150,16 +170,16 @@ function $(id) {
 <!--////////////////////////////////////Container-->
 <section id="container">
 	<div class="wrap-container zerogrid">
-		<div id="main-content" class="col-2-3">
+		<div id="main-content" class="col-full">
 			<div class="wrap-content">
 				<div class="movie">
 					<div class="row type">
 						<div class="title">
-							<center><h2>高分电影</h2></center>
+							<center><h2 id="ha"></h2></center>
 						</div>
 					</div>
 					<div class="row">
-						<div class="col-1-4">
+						<div class="col-1-5">
 							<div class="wrap-col">
 								<div class="post">
 									<div class="view effect">  
@@ -173,7 +193,7 @@ function $(id) {
 								</div>
 							</div>
 						</div>
-						<div class="col-1-4">
+						<div class="col-1-5">
 							<div class="wrap-col">
 								<div class="post">
 									<div class="view effect">  
@@ -184,7 +204,7 @@ function $(id) {
 								</div>
 							</div>
 						</div>
-						<div class="col-1-4">
+						<div class="col-1-5">
 							<div class="wrap-col">
 								<div class="post">
 									<div class="view effect">  
@@ -195,7 +215,18 @@ function $(id) {
 								</div>
 							</div>
 						</div>
-						<div class="col-1-4">
+						<div class="col-1-5">
+							<div class="wrap-col">
+								<div class="post">
+									<div class="view effect"> 
+									  <img class="thumb" src="images/5.jpg"  />  
+									</div>
+									<h3 onclick="pass(this.id)" style="cursor:pointer" id="4th">The Sorcerer's Apprentice</h3>
+									<span></span>
+								</div>
+							</div>
+						</div>
+						<div class="col-1-5">
 							<div class="wrap-col">
 								<div class="post">
 									<div class="view effect"> 
@@ -208,7 +239,7 @@ function $(id) {
 						</div>
 					</div>
 					<div class="row">
-						<div class="col-1-4">
+						<div class="col-1-5">
 							<div class="wrap-col">
 								<div class="post">
 									<div class="view effect">  
@@ -219,7 +250,7 @@ function $(id) {
 								</div>
 							</div>
 						</div>
-						<div class="col-1-4">
+						<div class="col-1-5">
 							<div class="wrap-col">
 								<div class="post">
 									<div class="view effect">  
@@ -230,7 +261,7 @@ function $(id) {
 								</div>
 							</div>
 						</div>
-						<div class="col-1-4">
+						<div class="col-1-5">
 							<div class="wrap-col">
 								<div class="post">
 									<div class="view effect">  
@@ -241,7 +272,7 @@ function $(id) {
 								</div>
 							</div>
 						</div>
-						<div class="col-1-4">
+						<div class="col-1-5">
 							<div class="wrap-col">
 								<div class="post">
 									<div class="view effect">  
@@ -252,99 +283,7 @@ function $(id) {
 								</div>
 							</div>
 						</div>
-					</div>
-
-				</div>
-				<div class="serie">
-					<div class="row type">
-						<div class="title">
-							<center><h2>热门电影</h2></center>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-1-4">
-							<div class="wrap-col">
-								<div class="post">
-									<div class="view effect">  
-									 <img class="thumb" src="images/1.jpg"  />
-  
-									  
-									</div>
-									<div class="clear"></div>
-						                <h3 onclick="pass(this.id)" style="cursor:pointer" id="1st">Lethal Weapon 4</h3>
-									<span></span>
-								</div>
-							</div>
-						</div>
-						<div class="col-1-4">
-							<div class="wrap-col">
-								<div class="post">
-									<div class="view effect">  
-									  <img class="thumb" src="images/2.jpg"  /> 
-									</div>
-									<h3 onclick="pass(this.id)" style="cursor:pointer" id="2rd">Film's Name</h3>
-									<span></span>
-								</div>
-							</div>
-						</div>
-						<div class="col-1-4">
-							<div class="wrap-col">
-								<div class="post">
-									<div class="view effect">  
-									 <img class="thumb" src="images/4.jpg"  /> 
-									</div>
-									<h3 onclick="pass(this.id)" style="cursor:pointer" id="3rd">Lord Of War</h3>
-									<span></span>
-								</div>
-							</div>
-						</div>
-						<div class="col-1-4">
-							<div class="wrap-col">
-								<div class="post">
-									<div class="view effect"> 
-									  <img class="thumb" src="images/5.jpg"  />  
-									</div>
-									<h3 onclick="pass(this.id)" style="cursor:pointer" id="4th">The Sorcerer's Apprentice</h3>
-									<span></span>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-1-4">
-							<div class="wrap-col">
-								<div class="post">
-									<div class="view effect">  
-									  <img class="thumb" src="images/3.jpg"  />    
-									</div>
-									<h3 onclick="pass(this.id)" style="cursor:pointer" id="5th">National Treasure</h3>
-									<span></span>
-								</div>
-							</div>
-						</div>
-						<div class="col-1-4">
-							<div class="wrap-col">
-								<div class="post">
-									<div class="view effect">  
-									  <img class="thumb" src="images/6.jpg"  />   
-									</div>
-									<h3 onclick="pass(this.id)" style="cursor:pointer" id="6th">Seeking Justice</h3>
-									<span></span>
-								</div>
-							</div>
-						</div>
-						<div class="col-1-4">
-							<div class="wrap-col">
-								<div class="post">
-									<div class="view effect">  
-									  <img class="thumb" src="images/7.jpg"  /> 
-									</div>
-									<h3 onclick="pass(this.id)" style="cursor:pointer" id="7th">Season Of The Witch</h3>
-									<span></span>
-								</div>
-							</div>
-						</div>
-						<div class="col-1-4">
+						<div class="col-1-5">
 							<div class="wrap-col">
 								<div class="post">
 									<div class="view effect">  
@@ -360,80 +299,7 @@ function $(id) {
 				</div>
 			</div>
 		</div>
-		<div id="sidebar" class="col-1-3">
-			<div class="wrap-sidebar">
-				<!---- Start Widget ---->
 
-				<!---- Start Widget ---->
-				
-				<!---- Start Widget ---->
-				<div class="widget wid-post">
-					<div class="wid-header">
-						<h5>热门推荐</h5>
-					</div>
-					<div class="wid-content">
-						<div class="post">
-							<a href="#"><img src="images/1.jpg"/></a>
-							<div class="wrapper">
-							  <a href="#"><h6>A Blue Morning</h6></a>
-							  <p>March 1, 2015</p>
-							  <a href="#"><img src="images/star.png" /></a>
-							</div>
-						</div>
-						<div class="post">
-							<a href="#"><img src="images/2.jpg"/></a>
-							<div class="wrapper">
-							 <a href="#"><h6>A Blue Morning</h6></a>
-							  <p>March 1, 2015</p>
-							  <a href="#"><img src="images/star.png" /></a>
-							</div>
-						</div>
-						<div class="post">
-							<a href="#"><img src="images/3.jpg"/></a>
-							<div class="wrapper">
-							 <a href="#"><h6>A Blue Morning</h6></a>
-							  <p>March 1, 2015</p>
-							  <a href="#"><img src="images/star.png" /></a>
-							</div>
-						</div>
-                        						<div class="post">
-							<a href="#"><img src="images/1.jpg"/></a>
-							<div class="wrapper">
-							  <a href="#"><h6>A Blue Morning</h6></a>
-							  <p>March 1, 2015</p>
-							  <a href="#"><img src="images/star.png" /></a>
-							</div>
-						</div>
-						<div class="post">
-							<a href="#"><img src="images/2.jpg"/></a>
-							<div class="wrapper">
-							 <a href="#"><h6>A Blue Morning</h6></a>
-							  <p>March 1, 2015</p>
-							  <a href="#"><img src="images/star.png" /></a>
-							</div>
-						</div>
-						<div class="post">
-							<a href="#"><img src="images/3.jpg"/></a>
-							<div class="wrapper">
-							 <a href="#"><h6>A Blue Morning</h6></a>
-							  <p>March 1, 2015</p>
-							  <a href="#"><img src="images/star.png" /></a>
-							</div>
-						</div>
-                        <div class="post">
-							<a href="#"><img src="images/3.jpg"/></a>
-							<div class="wrapper">
-							 <a href="#"><h6>A Blue Morning</h6></a>
-							  <p>March 1, 2015</p>
-							  <a href="#"><img src="images/star.png" /></a>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!---- Start Widget ---->
-
-			</div>
-		</div>
 	</div>
 </section>
 </div>

@@ -93,7 +93,7 @@ nav .wrap-nav{float: right;}
 #sidebar .box .content .last{border-bottom: 0px !important;}
 #sidebar .box .content ul{ list-style-type:none;}
 #sidebar .box .content ul li{border-bottom: 1px solid #EEEEEE; padding: 5px 0;}
-#sidebar .box .content .post {padding-bottom: 10px; margin-bottom:10px; border-bottom: 1px solid #EEEEEE;}
+#sidebar .box .content .post {padding-bottom: 1{px; margin-bottom:10px; border-bottom: 1px solid #EEEEEE;}
 #sidebar .box .content .post .title{ font-weight:normal; font-size: 16px; text-transform: none;}
 #sidebar .box .content .post img{ float:left; margin:0 10px 10px 0;}
 #sidebar .box .content .post p{color:#A3A3A3; font-style:italic;}

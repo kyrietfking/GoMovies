@@ -4,6 +4,7 @@
 <!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
 <!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
 <!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+
 <!--[if (gte IE 9)|!(IE)]><!-->
 <html lang="en">
  <!--<![endif]-->
@@ -40,8 +41,47 @@
 
     <link href='./images/favicon.ico' rel='icon' type='image/x-icon' />
 
+<script type="text/javascript">
+/***
+* @param {string} cookieName Cookie名称
+* @param {string} cookieValue Cookie值
+* @param {number} nDays Cookie过期天数
+*/
+
+function SetCookie(cookieName,cookieValue,nDays) {
+    /*当前日期*/
+    var today = new Date();
+    /*Cookie过期时间*/
+    var expire = new Date();
+    /*如果未设置nDays参数或者nDays为0，取默认值1*/
+    if(nDays == null || nDays == 0) nDays = 1;
+    /*计算Cookie过期时间*/
+    expire.setTime(today.getTime() + 3600000 * 24 * nDays);
+    /*设置Cookie值*/
+    document.cookie = cookieName + "=" + escape(cookieValue)
+        + ";expires=" + expire.toGMTString();
+}
+function pass(id) {
+
+    var title = $(id).innerHTML;
+
+    /*是否选中7天内无需登录*/
+        SetCookie("title",title,1);
+    /*跳转到ex8.html页面*/
+
+        document.location= "Movie.aspx";
+
+}
+function $(id) {
+    return document.getElementById(id);
+}
+
+</script>
 </head>
+
 <body>
+
+
     <div class="wrap-body">
         <!--------------Header--------------->
         <header>
@@ -51,7 +91,7 @@
                     <div class="wrap-header zerogrid">
                         <div class="menu">
                             <ul>
-                                <li><a href="index.html">Home</a></li>
+                                <li><a href="index.html">Personal Homepage</a></li>
 
                             </ul>
                         </div>
@@ -69,26 +109,26 @@
                             <div class="col-full">
                                 <div class="wrap-col">
                                     <article>
-                                        <div class="heading"><h2 class="title"><a href="#">NAME</a></h2></div>
-                                        <img src="images/img1.jpg" />
+                                        <div class="heading" align="center"><h2 class="title"><a href="#">NAME</a></h2></div>
+                                        <div align="center"><img src="images/img4.jpg" style="width:400px;height:300px"/></div>                                       
                                         <div class="content">
                                             <p>information</p>
                                         </div>
-
                                     </article>
                                 </div>
                             </div>
+                        </div>
+                        <div class="row">
+                            <div class="heading" align="center"><h2 class="title2" style="color:forestgreen">最新创建的电影</a></h2></div>
                         </div>
                         <div class="row">
                             <div class="col-1-2">
                                 <div class="wrap-col">
                                     <article>
                                         <div class="heading"><h2 class="title2"><a href="#">Quis mi commodo et suscipit</a></h2></div>
-                                        <img src="images/img2.jpg" />
+                                        <a href="#"><img src="images/1.jpg" style="height:380px"/></a>
                                         <div class="extra">
-                                            <div class="info"><a href="#">04 Commnets</a></div>
-                                            <div class="more"><a class="button" href="#">Read more >></a></div>
-                                            <div class="clear"></div>
+                                            <div align="center" style="color:white">评分：</div>
                                         </div>
                                     </article>
                                 </div>
@@ -97,11 +137,9 @@
                                 <div class="wrap-col">
                                     <article>
                                         <div class="heading"><h2 class="title2"><a href="#">Sed fringilla facilisis convallis</a></h2></div>
-                                        <img src="images/img3.jpg" />
+                                        <a href="#"><img src="images/5.jpg" style="height:380px"/></a>
                                         <div class="extra">
-                                            <div class="info"><a href="#">12 Commnets</a></div>
-                                            <div class="more"><a class="button" href="#">Read more >></a></div>
-                                            <div class="clear"></div>
+                                            <div align="center" style="color:white">评分：</div>
                                         </div>
                                     </article>
                                 </div>
@@ -112,11 +150,9 @@
                                 <div class="wrap-col">
                                     <article>
                                         <div class="heading"><h2 class="title2"><a href="#">Consectetur adipiscing elit</a></h2></div>
-                                        <img src="images/img4.jpg" />
+                                        <a href="#"><img src="images/7.jpg"style="height:380px" /></a>
                                         <div class="extra">
-                                            <div class="info"><a href="#">09 Commnets</a></div>
-                                            <div class="more"><a class="button" href="#">Read more >></a></div>
-                                            <div class="clear"></div>
+                                            <div align="center" style="color:white">评分：</div>
                                         </div>
                                     </article>
                                 </div>
@@ -125,11 +161,9 @@
                                 <div class="wrap-col">
                                     <article>
                                         <div class="heading"><h2 class="title2"><a href="#">Proin vitae turpis libero</a></h2></div>
-                                        <img src="images/img5.jpg" />
+                                        <a href="#"><img src="images/8.jpg" style="height:380px"/></a>
                                         <div class="extra">
-                                            <div class="info"><a href="#">06 Commnets</a></div>
-                                            <div class="more"><a class="button" href="#">Read more >></a></div>
-                                            <div class="clear"></div>
+                                            <div align="center" style="color:white">评分：</div>
                                         </div>
                                     </article>
                                 </div>
@@ -138,46 +172,52 @@
                     </div>
                     <div id="sidebar" class="col-1-3">
                         <div class="wrap-col">
-                            <div class="box">
 
                                 <div class="box">
-                                    <div class="heading"><h4 class="title">热门评论</h4></div>
+                                    <div class="heading" align="center"><h4 class="title" style="color:chocolate">猜你喜欢</h4></div>
                                     <div class="content">
                                         <div class="post">
-                                            <img src="images/img2.jpg" />
-                                            <h5 class="title"><a href="#">Lorem ipsum dolor sit amet</a></h5>
+                                            <div align="center">
+                                                
+                                                <img src="images/6.jpg" style="width:200px;height:280px" />
+                                                <h5 class="title"><a onclick="pass(this.id)" id="t1" style="cursor:pointer">Lorem ipsum dolor sit amet</a></h5>
+                                            </div>
                                         </div>
                                         <div class="post last">
-                                            <img src="images/img4.jpg" />
-                                            <h5 class="title"><a href="#">Lorem ipsum dolor sit amet</a></h5>
+                                            <div align="center">
+                                                <a href="#"><img src="images/4.jpg" style="width:200px;height:280px"/></a>
+                                                <h5 class="title"><a href="#">Lorem ipsum dolor sit amet</a></h5>
+                                            </div>
+                                        </div>
+                                        <div class="post last">
+                                            <div align="center">
+                                                <a href="#"><img src="images/2.jpg" style="width:200px;height:280px"/></a>
+                                                <h5 class="title"><a href="#">Lorem ipsum dolor sit amet</a></h5>
+                                            <div>
+                                        </div>
+                                        <div class="post last">
+                                            <div align="center">
+                                                <a href="#"><img src="images/10.jpg" style="width:200px;height:280px"/></a>
+                                                <h5 class="title"><a href="#">Lorem ipsum dolor sit amet</a></h5>
+                                            </div>
+                                        </div>
+                                        <div class="post last">
+                                            <div align="center">
+                                                <a href="#"><img src="images/9.jpg" style="width:200px;height:280px"/></a>
+                                                <h5 class="title"><a href="#">Lorem ipsum dolor sit amet</a></h5>
+                                            </div>
+                                        </div>
+                                            <br>
+                                        <div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="box">
-
-                                    <div class="box">
-                                        <div class="heading"><h4 class="title">最新评论</h4></div>
-                                        <div class="content">
-                                            <div class="post">
-                                                <img src="images/img1[thumb].jpg" />
-                                                <h5 class="title"><a href="#">Lorem ipsum dolor sit amet</a></h5>
-                                                <p>November 11 ,2012</p>
-                                            </div>
-                                            <div class="post">
-                                                <img src="images/img3[thumb].jpg" />
-                                                <h5 class="title"><a href="#">Lorem ipsum dolor sit amet</a></h5>
-                                                <p>November 11 ,2012</p>
-                                            </div>
-                                            <div class="post last">
-                                                <img src="images/img5[thumb].jpg" />
-                                                <h5 class="title"><a href="#">Lorem ipsum dolor sit amet</a></h5>
-                                                <p>November 11 ,2012</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    </div>  
+                </div>
         </section>
         <!--------------Footer--------------->
+        </div>
+    </body>
+</html>
+
+

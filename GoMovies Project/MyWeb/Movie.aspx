@@ -35,9 +35,41 @@
 		<script src="js/html5.js"></script>
 		<script src="js/css3-mediaqueries.js"></script>
 	<![endif]-->
-    
+
+
+
+<script type="text/javascript">
+    /***
+    *读取指定的Cookie值
+    *@param {string} cookieName Cookie名称
+    */
+    function ReadCookie(cookieName) {
+        var theCookie = "" + document.cookie;
+        var ind = theCookie.indexOf(cookieName);
+        if (ind == -1 || cookieName == "") return "";
+        var ind1 = theCookie.indexOf(';', ind);
+        if (ind1 == -1) ind1 = theCookie.length;
+        /*读取Cookie值*/
+        return unescape(theCookie.substring(ind + cookieName.length + 1, ind1));
+    }
+
+    function $(id) {
+        return document.getElementById(id);
+    }
+
+    function init() {
+        var title = ReadCookie("title");
+        if (title && title.length > 0) {
+            $("title").innerHTML =title;
+        } else {
+            $("title").innerHTML = "aaaa";
+        }
+    }
+</script>    
 </head>
-<body>
+<body onload="init()">
+
+
 <div class="wrap-body">
 
 <!--////////////////////////////////////Header-->
@@ -121,7 +153,7 @@
 						<div class="col-2-3">
 							<div class="wrap-col">
 								<ul>
-									<li><p>Tags: <a href="#">Action</a></p></li>
+									<li><p>Tags: <span id="title" style="color:white">Action</span></p></li>
 									<li><p>Production: <a href="#">Action</a></p></li>
 									<li><p>Actor: <a href="#">Action</a></p></li>
 									<li><p>Director: <a href="#">Action</a></p></li>
