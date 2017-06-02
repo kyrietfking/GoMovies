@@ -151,13 +151,13 @@ function init() {
 					<div class="wrap-nav">
 					   <ul>
 						 <li ><a href="Home.aspx">Home</a></li>
-						 <li id="喜剧片"><a onclick="passToCategory(this.id)" id="1"> 喜剧片</a></li>
-						 <li id="动作片"><a onclick="passToCategory(this.id)" id="2"> 动作片</a></li>
-						 <li id="爱情片"><a onclick="passToCategory(this.id)" id="3"> 爱情片</a></li>
-						 <li id="科幻片"><a onclick="passToCategory(this.id)" id="4"> 科幻片</a></li>
-						 <li id="恐怖片"><a onclick="passToCategory(this.id)" id="5"> 恐怖片</a></li>
-						 <li id="情景剧"><a onclick="passToCategory(this.id)" id="6"> 情景剧</a></li>
-						 <li id="微电影"><a onclick="passToCategory(this.id)" id="7"> 微电影</a></li>
+						 <li id="喜剧片"><a onclick="passToCategory(this.id)" id="1" style="cursor:pointer"> 喜剧片</a></li>
+						 <li id="动作片"><a onclick="passToCategory(this.id)" id="2" style="cursor:pointer"> 动作片</a></li>
+						 <li id="爱情片"><a onclick="passToCategory(this.id)" id="3" style="cursor:pointer"> 爱情片</a></li>
+						 <li id="科幻片"><a onclick="passToCategory(this.id)" id="4" style="cursor:pointer"> 科幻片</a></li>
+						 <li id="恐怖片"><a onclick="passToCategory(this.id)" id="5" style="cursor:pointer"> 恐怖片</a></li>
+						 <li id="情景剧"><a onclick="passToCategory(this.id)" id="6" style="cursor:pointer"> 情景剧</a></li>
+						 <li id="微电影"><a onclick="passToCategory(this.id)" id="7" style="cursor:pointer"> 微电影</a></li>
 					   </ul>
 					</div>
 				</nav>
