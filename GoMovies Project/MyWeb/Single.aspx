@@ -75,7 +75,10 @@ function pass(id) {
 function $(id) {
     return document.getElementById(id);
 }
+function goCreateMovie() {
 
+    document.location = "CreateMovie.aspx";
+}
 </script>
 </head>
 
@@ -169,6 +172,9 @@ function $(id) {
                                 </div>
                             </div>
                         </div>
+                        <div class="row" align="center">
+                              <button style="width:300px;height:40px;background-color:forestgreen" onclick="goCreateMovie()"><span style="font-size:20px;color:white">创建新的电影资料卡</span></button>
+                        </div>
                     </div>
                     <div id="sidebar" class="col-1-3">
                         <div class="wrap-col">
@@ -208,9 +214,7 @@ function $(id) {
                                             </div>
                                         </div>
                                             <br>
-                                        <div>
-                                        </div>
-                                    </div>
+                                 </div>
                                 </div>
                     </div>  
                 </div>
