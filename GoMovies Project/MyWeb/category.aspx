@@ -77,7 +77,7 @@ function pass(id) {
 }
 function passToCategory(id) {
 
-    var category = $(id).innerHTML;
+    var category = id;// $(id).innerHTML;
 
     /*是否选中7天内无需登录*/
     SetCookie("category", category, 1);
@@ -93,11 +93,11 @@ function init() {
 
     var category = ReadCookie("category");
     if (category && category.length > 0) {
-        $("ha").innerHTML =category;
+        $("ha").innerHTML =$(category).innerHTML;
     } else {
         $(category).innerHTML = "aaaa";
     }
-
+    <%=ShowCategory()%>;
 }
 </script>
 </head>
@@ -151,13 +151,13 @@ function init() {
 					<div class="wrap-nav">
 					   <ul>
 						 <li ><a href="Home.aspx">Home</a></li>
-						 <li id="喜剧片"><a onclick="passToCategory(this.id)" id="1" style="cursor:pointer"> 喜剧片</a></li>
-						 <li id="动作片"><a onclick="passToCategory(this.id)" id="2" style="cursor:pointer"> 动作片</a></li>
-						 <li id="爱情片"><a onclick="passToCategory(this.id)" id="3" style="cursor:pointer"> 爱情片</a></li>
-						 <li id="科幻片"><a onclick="passToCategory(this.id)" id="4" style="cursor:pointer"> 科幻片</a></li>
-						 <li id="恐怖片"><a onclick="passToCategory(this.id)" id="5" style="cursor:pointer"> 恐怖片</a></li>
-						 <li id="情景剧"><a onclick="passToCategory(this.id)" id="6" style="cursor:pointer"> 情景剧</a></li>
-						 <li id="微电影"><a onclick="passToCategory(this.id)" id="7" style="cursor:pointer"> 微电影</a></li>
+						 <li id="喜剧片"><a onclick="passToCategory(this.id)" id="comedy" style="cursor:pointer"> 喜剧片</a></li>
+						 <li id="动作片"><a onclick="passToCategory(this.id)" id="action" style="cursor:pointer"> 动作片</a></li>
+						 <li id="爱情片"><a onclick="passToCategory(this.id)" id="romance" style="cursor:pointer"> 爱情片</a></li>
+						 <li id="科幻片"><a onclick="passToCategory(this.id)" id="science" style="cursor:pointer"> 科幻片</a></li>
+						 <li id="恐怖片"><a onclick="passToCategory(this.id)" id="horror" style="cursor:pointer"> 恐怖片</a></li>
+						 <li id="情景剧"><a onclick="passToCategory(this.id)" id="feature" style="cursor:pointer"> 情景剧</a></li>
+						 <li id="微电影"><a onclick="passToCategory(this.id)" id="micro" style="cursor:pointer"> 微电影</a></li>
 					   </ul>
 					</div>
 				</nav>
@@ -183,12 +183,12 @@ function init() {
 							<div class="wrap-col">
 								<div class="post">
 									<div class="view effect">  
-									 <img class="thumb" src="images/1.jpg"  />
+									 <img class="thumb" src="images/1.jpg" runat="server" id="image1"/>
   
 									  
 									</div>
 									<div class="clear"></div>
-						                <h3 onclick="pass(this.id)" style="cursor:pointer" id="1st">Lethal Weapon 4</h3>
+						                <h3 onclick="pass(this.id)" style="cursor:pointer" id="title1st" runat="server">Lethal Weapon 4</h3>
 									<span></span>
 								</div>
 							</div>
@@ -197,9 +197,9 @@ function init() {
 							<div class="wrap-col">
 								<div class="post">
 									<div class="view effect">  
-									  <img class="thumb" src="images/2.jpg"  /> 
+									  <img class="thumb" src="images/1.jpg" runat="server" id="image2" /> 
 									</div>
-									<h3 onclick="pass(this.id)" style="cursor:pointer" id="2rd">Film's Name</h3>
+									<h3 onclick="pass(this.id)" style="cursor:pointer" id="title2nd" runat="server">Film's Name</h3>
 									<span></span>
 								</div>
 							</div>
@@ -208,9 +208,9 @@ function init() {
 							<div class="wrap-col">
 								<div class="post">
 									<div class="view effect">  
-									 <img class="thumb" src="images/4.jpg"  /> 
+									 <img class="thumb" src="images/1.jpg"  runat="server" id="image3" /> 
 									</div>
-									<h3 onclick="pass(this.id)" style="cursor:pointer" id="3rd">Lord Of War</h3>
+									<h3 onclick="pass(this.id)" style="cursor:pointer" id="title3rd" runat="server">Lord Of War</h3>
 									<span></span>
 								</div>
 							</div>
@@ -219,9 +219,9 @@ function init() {
 							<div class="wrap-col">
 								<div class="post">
 									<div class="view effect"> 
-									  <img class="thumb" src="images/5.jpg"  />  
+									  <img class="thumb" src="images/5.jpg" runat="server" id="image4"  />  
 									</div>
-									<h3 onclick="pass(this.id)" style="cursor:pointer" id="4th">The Sorcerer's Apprentice</h3>
+									<h3 onclick="pass(this.id)" style="cursor:pointer" id="title4th" runat="server">The Sorcerer's Apprentice</h3>
 									<span></span>
 								</div>
 							</div>
@@ -230,9 +230,9 @@ function init() {
 							<div class="wrap-col">
 								<div class="post">
 									<div class="view effect"> 
-									  <img class="thumb" src="images/5.jpg"  />  
+									  <img class="thumb" src="images/5.jpg"  runat="server" id="image5"/>  
 									</div>
-									<h3 onclick="pass(this.id)" style="cursor:pointer" id="4th">The Sorcerer's Apprentice</h3>
+									<h3 onclick="pass(this.id)" style="cursor:pointer" id="title5th" runat="server">The Sorcerer's Apprentice</h3>
 									<span></span>
 								</div>
 							</div>
@@ -243,9 +243,9 @@ function init() {
 							<div class="wrap-col">
 								<div class="post">
 									<div class="view effect">  
-									  <img class="thumb" src="images/3.jpg"  />    
+									  <img class="thumb" src="images/3.jpg" runat="server" id="image6" />    
 									</div>
-									<h3 onclick="pass(this.id)" style="cursor:pointer" id="5th">National Treasure</h3>
+									<h3 onclick="pass(this.id)" style="cursor:pointer" id="title6th" runat="server">National Treasure</h3>
 									<span></span>
 								</div>
 							</div>
@@ -254,9 +254,10 @@ function init() {
 							<div class="wrap-col">
 								<div class="post">
 									<div class="view effect">  
-									  <img class="thumb" src="images/6.jpg"  />   
+									  <img class="thumb" src="images/2png"  runat="server" id="image7"/>   
+                                        
 									</div>
-									<h3 onclick="pass(this.id)" style="cursor:pointer" id="6th">Seeking Justice</h3>
+									<h3 onclick="pass(this.id)" style="cursor:pointer" id="title7th" runat="server">Seeking Justice</h3>
 									<span></span>
 								</div>
 							</div>
@@ -265,9 +266,9 @@ function init() {
 							<div class="wrap-col">
 								<div class="post">
 									<div class="view effect">  
-									  <img class="thumb" src="images/7.jpg"  /> 
+									  <img class="thumb" src="images/7.jpg" runat="server" id="image8" /> 
 									</div>
-									<h3 onclick="pass(this.id)" style="cursor:pointer" id="7th">Season Of The Witch</h3>
+									<h3 onclick="pass(this.id)" style="cursor:pointer" id="title8th" runat="server">Season Of The Witch</h3>
 									<span></span>
 								</div>
 							</div>
@@ -276,9 +277,9 @@ function init() {
 							<div class="wrap-col">
 								<div class="post">
 									<div class="view effect">  
-									  <img class="thumb" src="images/8.jpg"  />   
+									  <img class="thumb" src="images/8.jpg" id="image9" runat="server" />   
 									</div>
-									<h3 onclick="pass(this.id)" style="cursor:pointer" id="8th">Three Mustketeers</h3>
+									<h3 onclick="pass(this.id)" style="cursor:pointer" id="title9th" runat="server">Three Mustketeers</h3>
 									<span></span>
 								</div>
 							</div>
@@ -287,9 +288,9 @@ function init() {
 							<div class="wrap-col">
 								<div class="post">
 									<div class="view effect">  
-									  <img class="thumb" src="images/8.jpg"  />   
+									  <img class="thumb" src="images/8.jpg"  runat="server" id="image10"/>   
 									</div>
-									<h3 onclick="pass(this.id)" style="cursor:pointer" id="8th">Three Mustketeers</h3>
+									<h3 onclick="pass(this.id)" style="cursor:pointer" id="title10th" runat="server">Three Mustketeers</h3>
 									<span></span>
 								</div>
 							</div>

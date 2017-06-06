@@ -99,7 +99,7 @@
             $("title").innerHTML = "aaaa";
         }
 
-
+        <%=ShowMovie()%>;
     }
 
 </script>   
@@ -178,18 +178,18 @@
 					<div class="art-header">
 						<div class="col-1-3">
 							<div class="wrap-col">
-								<img src="images/boy7.png" />
+								<img src="images/boy7.png"  id="movieimage" runat="server"/>
 							</div>
 						</div>
 						<div class="col-1-3">
 							<div class="wrap-col">
 								<ul>
-									<li><p>Title: <span id="title" style="color:white">Action</span></p></li>
-									<li><p>Director:<span id="director" style="color:white">Action</span></p></li>
-									<li><p>Nation: <span id="nation" style="color:white">Action</span></p></li>
-                                    <li><p>Language: <span id="language" style="color:white">Action</span></p></li>
-									<li><p>Length:<span id="length" style="color:white">Action</span></p></li>
-									<li><p>Link: <span id="link" style="color:white">Action</span></p></li>					
+									<li><p>Title: <span id="title" style="color:white" runat="server">Action</span></p></li>
+									<li><p>Director:<span id="director" style="color:white" runat="server">Action</span></p></li>
+									<li><p>Nation: <span id="nation" style="color:white" runat="server">Action</span></p></li>
+                                    <li><p>Language: <span id="language" style="color:white" runat="server">Action</span></p></li>
+									<li><p>Length:<span id="length" style="color:white" runat="server">Action</span></p></li>
+									<li><p>Introduction: <span id="introduction" style="color:white" runat="server">Action</span></p></li>					
 								</ul>
 							</div>
 						</div>
